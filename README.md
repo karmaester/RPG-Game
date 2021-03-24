@@ -1,80 +1,49 @@
-# webpackTemplate
+# Phaser 3 Webpack Project Template
 
-This is a basic template of Webpack configuration.
+A Phaser 3 project template with ES6 support via [Babel 7](https://babeljs.io/) and [Webpack 4](https://webpack.js.org/) that includes hot-reloading for development and production-ready builds.
 
-## :hammer: Built with
+This has been updated for Phaser 3.50.0 version and above.
 
-- webpack
+Loading images via JavaScript module `import` is also supported, although not recommended.
 
-## :factory: Content
+## Requirements
 
-1. [Webpack](https://webpack.js.org/)
-2. [Sass-loader](https://github.com/webpack-contrib/sass-loader)
-3. [Html-Webpack-plguin](https://github.com/jantimon/html-webpack-plugin)
-4. [Mini-Css-Extract-Plugin](https://github.com/webpack-contrib/mini-css-extract-plugin)
-5. [Css-Minimizer-Webpack-Plugin](https://github.com/webpack-contrib/css-minimizer-webpack-plugin)
+[Node.js](https://nodejs.org) is required to install dependencies and run scripts via `npm`.
 
-## :book: :construction_worker: Getting Started
+## Available Commands
 
-To get a local copy up and running follow these simple steps:
+| Command | Description |
+|---------|-------------|
+| `npm install` | Install project dependencies |
+| `npm start` | Build project and open web server running project |
+| `npm run build` | Builds code bundle with production settings (minification, uglification, etc..) |
 
-1. Go to the [repository page](https://github.com/kcotrinam/webpackTemplate).
-2. Click on the "Code" button and copy the HTTPS link.
-3. Clone the repository: `git clone <you_repository_link>`.
-4. Move to the local project: `cd <Your_repository_name>`.
-5. run `npm install`.
+## Writing Code
 
-## :memo: Pre-requisites?
+After cloning the repo, run `npm install` from your project directory. Then, you can start the local development server by running `npm start`.
 
-1. Install node-js
+After starting the development server with `npm start`, you can edit any files in the `src` folder and webpack will automatically recompile and reload your server (available at `http://localhost:8080` by default).
 
-## :rocket: How to use it?
+## Customizing the Template
 
-1. Click on `Use this template`.
-2. Choose a name for your repo.
-3. Click on "Create repository from template".
-4. Clone your new repository: `git clone <you_repository_link>`
-5. Move to your local repository: `cd <Your_repository_name>`.
-6. run `npm install`
+### Babel
 
-## :interrobang: How It works?
+You can write modern ES6+ JavaScript and Babel will transpile it to a version of JavaScript that you want your project to support. The targeted browsers are set in the `.babelrc` file and the default currently targets all browsers with total usage over "0.25%" but excludes IE11 and Opera Mini.
 
-1. follow the steps on the "How to use it?" section,
-2. If you want to run the development mode run: `npm run dev`.
-3. If you want to run the production mode run: `npm run dev`.
+ ```
+"browsers": [
+  ">0.25%",
+  "not ie 11",
+  "not op_mini all"
+]
+ ```
 
-## :interrobang: want to desable webpack server?
+### Webpack
 
-1. Open the package.json file.
-2. Delete "serve" on the "dev" script.
-3. Add `--watch` on the "dev" script.
+If you want to customize your build, such as adding a new webpack loader or plugin (i.e. for loading CSS or fonts), you can modify the `webpack/base.js` file for cross-project changes, or you can modify and/or create new configuration files and target them in specific npm tasks inside of `package.json'.
 
-## :bust_in_silhouette: Author
+## Deploying Code
 
-👤 **Kenvin Cotrina**
+After you run the `npm run build` command, your code will be built into a single bundle located at `dist/bundle.min.js` along with any other assets you project depended. 
 
-- GitHub: [kcotrinam](https://github.com/kcotrinam)
-- Twitter: [@kcotrinam_dev](https://twitter.com/kcotrinam_dev)
-- LinkedIn: [KevinCotrina](https://www.linkedin.com/in/kevincotrina/)
-
-## :raised_hand: :raised_hand: Contributions
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](https://github.com/kcotrinam/webpackTemplate/issues).
-
-## :muscle: Show your support
-
-Give a ⭐️ if you like this project!
-
-## :grey_exclamation: Acknowledgment
-
-- [Webpack](https://webpack.js.org/)
-- [Sass-loader](https://github.com/webpack-contrib/sass-loader)
-- [Html-Webpack-plguin](https://github.com/jantimon/html-webpack-plugin)
-- [Mini-Css-Extract-Plugin](https://github.com/webpack-contrib/mini-css-extract-plugin)
-- [Css-Minimizer-Webpack-Plugin](https://github.com/webpack-contrib/css-minimizer-webpack-plugin)
-
-## 📝 License
-
-This project is [MIT](LICENSE) licensed.
+If you put the contents of the `dist` folder in a publicly-accessible location (say something like `http://mycoolserver.com`), you should be able to open `http://mycoolserver.com/index.html` and play your game.

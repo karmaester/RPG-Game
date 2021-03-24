@@ -1,17 +1,39 @@
-import "./scss/styles.scss"
+import Phaser from 'phaser';
+import logoImg from './assets/logo.png';
 
-const container = document.querySelector('.joke-container');
+class MyGame extends Phaser.Scene
+{
+    constructor ()
+    {
+        super();
+    }
 
-const requestJoke = async () => {
-  const url = "https://api.chucknorris.io/jokes/random";
-  const response = await fetch(url);
-  const json = await response.json();
-  return json;
+    preload ()
+    {
+        this.load.image('logo', logoImg);
+    }
+      
+    create ()
+    {
+        const logo = this.add.image(400, 150, 'logo');
+      
+        this.tweens.add({
+            targets: logo,
+            y: 450,
+            duration: 2000,
+            ease: "Power2",
+            yoyo: true,
+            loop: -1
+        });
+    }
 }
 
-const displayJoke = async () => {
-  const joke = await requestJoke();
-  container.innerText = joke.value
-}
+const config = {
+    type: Phaser.AUTO,
+    parent: 'phaser-example',
+    width: 800,
+    height: 600,
+    scene: MyGame
+};
 
-displayJoke()
+const game = new Phaser.Game(config);
