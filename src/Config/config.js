@@ -14,8 +14,10 @@ export default {
           debug: false // set to true to view zones
       }
   }
-  // scene: [
-  //     BootScene,
-  //     GameScene
-  // ]
+//   scene: [
+//     BootScene,
+//     WorldScene,
+//     BattleScene,
+//     UIScene
+// ]
 };
