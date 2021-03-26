@@ -22,10 +22,10 @@ class BattleScene extends Phaser.Scene {
         var mage = new PlayerCharacter(this, 250, 100, "player", 4, "Mage", 80, 8);
         this.add.existing(mage);            
         
-        var dragonblue = new Enemy(this, 50, 50, "dragonblue", null, "Dragon", 3, 3);
+        var dragonblue = new Enemy(this, 50, 50, "damon", null, "Damon", 3, 3);
         this.add.existing(dragonblue);
         
-        var dragonOrange = new Enemy(this, 50, 100, "dragonorrange", null,"Dragon2", 3, 3);
+        var dragonOrange = new Enemy(this, 50, 100, "shadow", null,"Shadow", 3, 3);
         this.add.existing(dragonOrange);
         
         // array with heroes
