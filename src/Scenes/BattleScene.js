@@ -281,15 +281,11 @@ class Menu extends Phaser.GameObjects.Container {
     }
 };
 
-var HeroesMenu = new Phaser.Class({
-    Extends: Menu,
-    
-    initialize:
-            
-    function HeroesMenu(x, y, scene) {
-        Menu.call(this, x, y, scene);                    
-    }
-});
+class HeroesMenu extends Menu {
+  constructor(x, y, scene) {
+    super(x, y, scene);
+  }
+};
 
 class ActionsMenu extends Menu {
     constructor(x, y, scene) {
@@ -457,3 +453,5 @@ class Message extends Phaser.GameObjects.Container {
       this.visible = false;
     }
   };
+
+  export { BattleScene, UIScene };
