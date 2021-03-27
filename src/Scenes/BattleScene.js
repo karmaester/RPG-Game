@@ -7,7 +7,7 @@ class BattleScene extends Phaser.Scene {
     create ()
     {    
         // change the background to green
-        this.cameras.main.setBackgroundColor("rgba(0, 200, 0, 0.5)");
+        this.cameras.main.setBackgroundColor("rgba(0, 98, 184, 0.5)");
         this.startBattle();
         // on wake event we call startBattle too
         this.sys.events.on('wake', this.startBattle, this);             
@@ -15,11 +15,11 @@ class BattleScene extends Phaser.Scene {
 
     startBattle () {
         // player character - warrior
-        var warrior = new PlayerCharacter(this, 250, 50, "player", 1, "Warrior", 100, 20);        
+        var warrior = new PlayerCharacter(this, 250, 50, "player", 1, "Firebeast", 100, 20);        
         this.add.existing(warrior);
         
         // player character - mage
-        var mage = new PlayerCharacter(this, 250, 100, "player", 4, "Mage", 80, 8);
+        var mage = new PlayerCharacter(this, 250, 100, "player", 4, "Icebeast", 80, 8);
         this.add.existing(mage);            
         
         var dragonblue = new Enemy(this, 50, 50, "damon", null, "Damon", 3, 3);
@@ -171,7 +171,7 @@ class PlayerCharacter extends Unit {
         super(scene, x, y, texture, frame, type, hp, damage, 1.3);
     
         this.flipX = true;
-        this.setScale(2);
+        this.setScale(3);
       }
 };
 
