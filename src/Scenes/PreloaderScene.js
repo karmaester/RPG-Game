@@ -10,14 +10,12 @@ export default class PreloaderScene extends Phaser.Scene {
   }
 
   preload () {
-    // add logo image
-    this.add.image(400, 200, 'logo');
 
     // display progress bar
     var progressBar = this.add.graphics();
     var progressBox = this.add.graphics();
     progressBox.fillStyle(0x222222, 0.8);
-    progressBox.fillRect(240, 270, 320, 50);
+    progressBox.fillRect(100, 270, 220, 50);
 
     var width = this.cameras.main.width;
     var height = this.cameras.main.height;
@@ -59,7 +57,7 @@ export default class PreloaderScene extends Phaser.Scene {
       percentText.setText(parseInt(value * 100) + '%');
       progressBar.clear();
       progressBar.fillStyle(0xffffff, 1);
-      progressBar.fillRect(250, 280, 300 * value, 30);
+      progressBar.fillRect(110, 280, 200 * value, 30);
     });
 
     // update file progress text
@@ -82,7 +80,6 @@ export default class PreloaderScene extends Phaser.Scene {
     // load assets needed in our game
     this.load.image('blueButton1', '../assets/ui/blue_button02.png');
     this.load.image('blueButton2', '../assets/ui/blue_button03.png');
-    this.load.image('phaserLogo', '../assets/logo.png');
     this.load.image('box', '../assets/ui/grey_box.png');
     this.load.image('checkedBox', '../assets/ui/blue_boxCheckmark.png');
     this.load.audio('bgMusic', ['../assets/TownTheme.mp3']);
