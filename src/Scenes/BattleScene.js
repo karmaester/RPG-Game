@@ -322,21 +322,21 @@ class UIScene extends Phaser.Scene {
       this.graphics.fillStyle(0x031f4c, 1);
   
       // rectangle 1
-      this.graphics.strokeRect(2, 150, 110, 100);
-      this.graphics.fillRect(2, 150, 110, 100);
+      this.graphics.strokeRect(2, 250, 140, 100);
+      this.graphics.fillRect(2, 250, 140, 100);
       // rectangle 2
-      this.graphics.strokeRect(115, 150, 70, 100);
-      this.graphics.fillRect(115, 150, 70, 100);
+      this.graphics.strokeRect(145, 250, 130, 100);
+      this.graphics.fillRect(145, 250, 130, 100);
       // rectangle 3
-      this.graphics.strokeRect(188, 150, 130, 100);
-      this.graphics.fillRect(188, 150, 130, 100);
+      this.graphics.strokeRect(278, 250, 140, 100);
+      this.graphics.fillRect(278, 250, 140, 100);
   
       // menus
       this.menus = this.add.container();
   
-      this.heroesMenu = new HeroesMenu(195, 153, this);
-      this.actionsMenu = new ActionsMenu(120, 153, this);
-      this.enemiesMenu = new EnemiesMenu(8, 153, this);
+      this.heroesMenu = new HeroesMenu(295, 263, this);
+      this.actionsMenu = new ActionsMenu(178, 283, this);
+      this.enemiesMenu = new EnemiesMenu(18, 263, this);
   
       this.currentMenu = this.actionsMenu;
   
