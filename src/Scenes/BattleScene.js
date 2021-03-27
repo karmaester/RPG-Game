@@ -15,17 +15,17 @@ class BattleScene extends Phaser.Scene {
 
     startBattle () {
         // player character - warrior
-        var warrior = new PlayerCharacter(this, 250, 50, "player", 1, "Firebeast", 100, 20);        
+        var warrior = new PlayerCharacter(this, 350, 70, "player", 1, "Firebeast", 100, 20);        
         this.add.existing(warrior);
         
         // player character - mage
-        var mage = new PlayerCharacter(this, 250, 100, "player", 4, "Icebeast", 80, 8);
+        var mage = new PlayerCharacter(this, 350, 150, "player", 4, "Icebeast", 80, 8);
         this.add.existing(mage);            
         
-        var dragonblue = new Enemy(this, 50, 50, "damon", null, "Damon", 3, 3);
+        var dragonblue = new Enemy(this, 70, 65, "damon", null, "Damon", 3, 3);
         this.add.existing(dragonblue);
         
-        var dragonOrange = new Enemy(this, 50, 100, "shadow", null,"Shadow", 3, 3);
+        var dragonOrange = new Enemy(this, 70, 170, "shadow", null,"Shadow", 3, 3);
         this.add.existing(dragonOrange);
         
         // array with heroes
@@ -162,6 +162,7 @@ class Enemy extends Unit {
 
     constructor(scene, x, y, texture, frame, type, hp, damage) {
         super(scene, x, y, texture, frame, type, hp, damage, 0.8);
+        this.setScale(2);
       }
 };
 
@@ -171,7 +172,7 @@ class PlayerCharacter extends Unit {
         super(scene, x, y, texture, frame, type, hp, damage, 1.3);
     
         this.flipX = true;
-        this.setScale(3);
+        this.setScale(4);
       }
 };
 
