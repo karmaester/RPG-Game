@@ -22,7 +22,7 @@ class BattleScene extends Phaser.Scene {
         var mage = new PlayerCharacter(this, 350, 150, "player", 4, "Icebeast", 80, 8);
         this.add.existing(mage);            
         
-        var dragonblue = new Enemy(this, 70, 65, "damon", null, "Damon", 3, 3);
+        var dragonblue = new Enemy(this, 70, 65, "damon", null, "Demon", 3, 3);
         this.add.existing(dragonblue);
         
         var dragonOrange = new Enemy(this, 70, 170, "shadow", null,"Shadow", 3, 3);
@@ -423,10 +423,10 @@ class Message extends Phaser.GameObjects.Container {
   
       graphics.lineStyle(1, 0xffffff, 0.8);
       graphics.fillStyle(0x031f4c, 0.3);
-      graphics.strokeRect(-100, -15, 200, 30);
-      graphics.fillRect(-100, -15, 200, 30);
+      graphics.strokeRect(-50, -15, 200, 30);
+      graphics.fillRect(-50, -15, 200, 30);
   
-      this.text = new Phaser.GameObjects.Text(scene, 0, 0, '', {
+      this.text = new Phaser.GameObjects.Text(scene, 50, 0, '', {
         color: '#ffffff',
         align: 'center',
         fontSize: 12,
