@@ -13,12 +13,12 @@ export default class GetName extends Phaser.Scene {
 
   create() {
     this.cameras.main.setBackgroundColor('#000000');
-    this.add.text(10, 10, 'Enter your name: ', {
+    this.add.text(110, 100, 'Type your name,\nthen press enter:', {
       font: '22px Courier', fill: '#ffffff',
     });
 
-    this.text = this.add.text(10, 50, '', {
-      font: '22px Courier', fill: '#ffff00',
+    this.text = this.add.text(140, 170, '', {
+      font: '32px Courier', fill: '#28eefd',
     });
 
     let textEntry = '';

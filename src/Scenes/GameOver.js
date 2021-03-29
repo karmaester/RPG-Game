@@ -13,7 +13,6 @@ export default class GameOver extends Phaser.Scene {
       'Thanks for Playing', {
         fill: '#ffffff',
         fontSize: '22px',
-        fontFamily: 'Georgias, Times, serif',
       },
     ).setOrigin(0.5);
 
@@ -23,7 +22,6 @@ export default class GameOver extends Phaser.Scene {
       'Fire & Ice', {
         fill: '#ffffff',
         fontSize: '32px',
-        fontFamily: 'Georgias, Times, serif',
       },
     ).setOrigin(0.5);
 
@@ -33,7 +31,6 @@ export default class GameOver extends Phaser.Scene {
       'Your Score:', {
         fill: '#ffffff',
         fontSize: '24px',
-        fontFamily: 'Georgias, Times, serif',
       },
     ).setOrigin(0.5);
 
@@ -43,10 +40,9 @@ export default class GameOver extends Phaser.Scene {
       `${window.playerName}: ${window.score}`, {
         fill: '#ffffff',
         fontSize: '24px',
-        fontFamily: 'Georgias, Times, serif',
       },
     ).setOrigin(0.5);
 
-    // setScore(window.playerName, window.score);
+    setScore(window.playerName, window.score);
   }
 }
