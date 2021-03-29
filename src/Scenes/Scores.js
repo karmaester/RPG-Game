@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 import Button from '../Objects/Button';
-// import { scoreBoard, sortScores } from '../api/scoreBoard';
+import { scoreBoard, sortScores } from '../api/scoreBoard';
 
 export default class Scores extends Phaser.Scene {
   constructor() {
@@ -26,7 +26,7 @@ export default class Scores extends Phaser.Scene {
   }
         
         
-  create (){
+  async create (){
     this.add.text(
     143,
     25,
@@ -36,8 +36,8 @@ export default class Scores extends Phaser.Scene {
         fontFamily: 'Georgias, Times, serif',
     })
     this.menuButton = new Button(this, 210, 300, 'blueButton1', 'blueButton2', 'Menu', 'Title');
-    // const scores = await scoreBoard();
-    // this.displayLeaders(sortScores(scores));
+    const scores = await scoreBoard();
+    this.displayLeaders(sortScores(scores));
   }
 
 }
