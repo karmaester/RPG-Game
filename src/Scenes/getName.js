@@ -1,5 +1,4 @@
 import Phaser from 'phaser';
-import game from '../index';
 
 export default class GetName extends Phaser.Scene {
   constructor() {
