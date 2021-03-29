@@ -10,19 +10,20 @@ export default class GameScene extends Phaser.Scene {
     
     create ()
     {
-    let score = 0;
-    // create the map
-    const map = this.make.tilemap({ key: 'map' });
-    
-    // first parameter is the name of the tilemap in tiled
-    const tiles = map.addTilesetImage('spritesheet', 'tiles');
-    
-    
-    // creating the layers
-    const grass = map.createStaticLayer('Grass', tiles, 0, 0);
-    const obstacles = map.createStaticLayer('Obstacles', tiles, 0, 0);
-    
-    let scoreText = this.add.text(10, 6, 'score: 0', { fontSize: '22px', fill: '#fff' });
+        // create the map
+        const map = this.make.tilemap({ key: 'map' });
+        
+        // first parameter is the name of the tilemap in tiled
+        const tiles = map.addTilesetImage('spritesheet', 'tiles');
+        
+        
+        // creating the layers
+        const grass = map.createStaticLayer('Grass', tiles, 0, 0);
+        const obstacles = map.createStaticLayer('Obstacles', tiles, 0, 0);
+        
+        //scores
+        window.score = 0;
+        this.scoreText = this.add.text(10, 6, 'score: 0', { fontSize: '22px', fill: '#fff' });
     // make all tiles in obstacles collidable
     obstacles.setCollisionByExclusion([-1]);
     
@@ -92,8 +93,8 @@ wake () {
     this.cursors.right.reset();
     this.cursors.up.reset();
     this.cursors.down.reset();
-    // score += 20;
-    // scoreText.setText('Score: ' + score);
+    window.score += 20;
+    this.scoreText.setText('Score: ' + window.score);
 }
 
   onMeetEnemy (player, zone) {        

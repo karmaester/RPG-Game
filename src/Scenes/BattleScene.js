@@ -15,17 +15,17 @@ class BattleScene extends Phaser.Scene {
 
     startBattle () {
         // player character - warrior
-        var warrior = new PlayerCharacter(this, 350, 70, "player", 1, "Firebeast", 100, 20);        
+        var warrior = new PlayerCharacter(this, 350, 70, "player", 1, "Firebeast", 3, 20);        
         this.add.existing(warrior);
         
         // player character - mage
-        var mage = new PlayerCharacter(this, 350, 150, "player", 4, "Icebeast", 80, 8);
+        var mage = new PlayerCharacter(this, 350, 150, "player", 4, "Icebeast", 3, 8);
         this.add.existing(mage);            
         
-        var dragonblue = new Enemy(this, 70, 65, "damon", null, "Demon", 3, 3);
+        var dragonblue = new Enemy(this, 70, 65, "damon", null, "Demon", 20, 3);
         this.add.existing(dragonblue);
         
-        var dragonOrange = new Enemy(this, 70, 170, "shadow", null,"Shadow", 3, 3);
+        var dragonOrange = new Enemy(this, 70, 170, "shadow", null,"Shadow", 20, 3);
         this.add.existing(dragonOrange);
         
         // array with heroes
@@ -107,8 +107,13 @@ class BattleScene extends Phaser.Scene {
         this.units.length = 0;
         // sleep the UI
         this.scene.sleep('UIScene');
+
+        if (true) {
+          this.scene.switch('GameOver');
+        } else {
+          this.scene.switch('Game');
+        }
         // return to WorldScene and sleep current BattleScene
-        this.scene.switch('Game');
     }
 };
 

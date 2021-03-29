@@ -7,6 +7,7 @@ import TitleScene from './Scenes/TitleScene';
 import OptionsScene from './Scenes/OptionsScene';
 import InstructionsScene from './Scenes/Instructions';
 import Scores from './Scenes/Scores';
+import GameOver from './Scenes/GameOver';
 import GetName from './Scenes/getName';
 import CreditsScene from './Scenes/CreditsScene';
 import Model from './Model';
@@ -25,6 +26,7 @@ class Game extends Phaser.Game {
     this.scene.add('Instructions', InstructionsScene);
     this.scene.add('Scores', Scores);
     this.scene.add('GetName', GetName);
+    this.scene.add('GameOver', GameOver);
     this.scene.add('Game', GameScene);
     this.scene.add('UIScene', UIScene);
     this.scene.add('BattleScene', BattleScene);
