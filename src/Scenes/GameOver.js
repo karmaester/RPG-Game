@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-// import { setScore } from '../api/scoreBoard';
+import { setScore } from '../api/scoreBoard';
 
 export default class GameOver extends Phaser.Scene {
   constructor() {
@@ -9,8 +9,8 @@ export default class GameOver extends Phaser.Scene {
   create() {
     this.add.text(
       game.config.width / 2,
-      20,
-      'Thanks for Playing', {
+      70,
+      'Thanks for playing', {
         fill: '#ffffff',
         fontSize: '22px',
       },
@@ -18,7 +18,7 @@ export default class GameOver extends Phaser.Scene {
 
     this.add.text(
       game.config.width / 2,
-      50,
+      100,
       'Fire & Ice', {
         fill: '#ffffff',
         fontSize: '32px',
@@ -27,8 +27,8 @@ export default class GameOver extends Phaser.Scene {
 
     this.add.text(
       game.config.width / 2,
-      100,
-      'Your Score:', {
+      180,
+      'Score:', {
         fill: '#ffffff',
         fontSize: '24px',
       },
@@ -36,7 +36,7 @@ export default class GameOver extends Phaser.Scene {
 
     this.add.text(
       game.config.width / 2,
-      140,
+      220,
       `${window.playerName}: ${window.score}`, {
         fill: '#ffffff',
         fontSize: '24px',

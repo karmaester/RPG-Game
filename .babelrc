@@ -1,6 +1,8 @@
 {
   "presets": [
     ["@babel/env", {
+      "corejs": 3.9,
+      "useBuiltIns": "usage",
       "targets": {
         "browsers": [
           ">0.25%",
