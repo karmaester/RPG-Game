@@ -37,6 +37,7 @@ export default class Scores extends Phaser.Scene {
     })
     this.menuButton = new Button(this, 210, 300, 'blueButton1', 'blueButton2', 'Menu', 'Title');
     const scores = await scoreBoard();
+    console.log(scores);
     this.displayLeaders(sortScores(scores));
   }
 

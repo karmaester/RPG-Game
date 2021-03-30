@@ -1,4 +1,4 @@
-const key = 'Zl4d7IVkemOTTVg2fUdz';
+const key = 'KWiRgu7V60lb8Bt7Iwoz';
 const url = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${key}/scores`;
 
 export const scoreBoard = async () => {
