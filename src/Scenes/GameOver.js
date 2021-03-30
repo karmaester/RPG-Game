@@ -43,6 +43,6 @@ export default class GameOver extends Phaser.Scene {
       },
     ).setOrigin(0.5);
 
-    setScore(window.playerName, 210);
+    setScore(window.playerName, window.score);
   }
 }

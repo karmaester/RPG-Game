@@ -1,16 +1,31 @@
-# Phaser 3 Webpack Project Template
+# RPG Game
 
-A Phaser 3 project template with ES6 support via [Babel 7](https://babeljs.io/) and [Webpack 4](https://webpack.js.org/) that includes hot-reloading for development and production-ready builds.
+A Phaser 3 project with ES6, Babel 7, and Webpack 4
 
-This has been updated for Phaser 3.50.0 version and above.
+![screenshot](src/images/screenshot.png)
 
-Loading images via JavaScript module `import` is also supported, although not recommended.
+## Live Demo
 
-## Requirements
+[Live version](https://bigwizzo.github.io/What-to-Do/)
 
-[Node.js](https://nodejs.org) is required to install dependencies and run scripts via `npm`.
+## Built With
 
-## Available Commands
+- Javascript
+- Phaser 3
+- Webpack
+- Babel
+
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+### Setup
+
+- Open the console
+- Download or git clone https://github.com/bigwizzo/What-to-Do.git
+- cd Books-Books
+
+### Available Commands
 
 | Command | Description |
 |---------|-------------|
@@ -18,32 +33,46 @@ Loading images via JavaScript module `import` is also supported, although not re
 | `npm start` | Build project and open web server running project |
 | `npm run build` | Builds code bundle with production settings (minification, uglification, etc..) |
 
-## Writing Code
+### Testing
 
-After cloning the repo, run `npm install` from your project directory. Then, you can start the local development server by running `npm start`.
+Run the following commands
 
-After starting the development server with `npm start`, you can edit any files in the `src` folder and webpack will automatically recompile and reload your server (available at `http://localhost:8080` by default).
+```
+   npm run watch
+```
 
-## Customizing the Template
+### Github Actions
 
-### Babel
+To make sure the linters' checks using Github Actions work properly, you should follow the next steps:
 
-You can write modern ES6+ JavaScript and Babel will transpile it to a version of JavaScript that you want your project to support. The targeted browsers are set in the `.babelrc` file and the default currently targets all browsers with total usage over "0.25%" but excludes IE11 and Opera Mini.
+1. On your recent repo, enable the GitHub Actions in the Actions tab.
+2. Create the `feature/branch` and push.
+3. Open a PR from the `feature/branch` when your work is done.
 
- ```
-"browsers": [
-  ">0.25%",
-  "not ie 11",
-  "not op_mini all"
-]
- ```
+## Author
 
-### Webpack
+👤 **Khristian Rojas**
 
-If you want to customize your build, such as adding a new webpack loader or plugin (i.e. for loading CSS or fonts), you can modify the `webpack/base.js` file for cross-project changes, or you can modify and/or create new configuration files and target them in specific npm tasks inside of `package.json'.
+- Github: [@githubhandle](https://github.com/karmaester)
+- Twitter: [@twitterhandle](https://twitter.com/karmaendlich)
+- Linkedin: [linkedin](https://www.linkedin.com/in/khristian-rojas/)
 
-## Deploying Code
+## 🤝 Contributing
 
-After you run the `npm run build` command, your code will be built into a single bundle located at `dist/bundle.min.js` along with any other assets you project depended. 
+Contributions, issues and feature requests are welcome!
 
-If you put the contents of the `dist` folder in a publicly-accessible location (say something like `http://mycoolserver.com`), you should be able to open `http://mycoolserver.com/index.html` and play your game.
+Feel free to check the [issues page](https://github.com/bigwizzo/What-to-Do/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse
+- Stand up Team
+- TSEs
+
+## 📝 License
+
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
