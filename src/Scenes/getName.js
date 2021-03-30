@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import Button from '../Objects/Button';
 
 export default class GetName extends Phaser.Scene {
   constructor() {
@@ -16,6 +17,8 @@ export default class GetName extends Phaser.Scene {
     this.add.text(110, 100, 'Type your name,\nthen press enter:', {
       font: '22px Courier', fill: '#ffffff',
     });
+
+    this.menuButton = new Button(this, 210, 300, 'blueButton1', 'blueButton2', 'Menu', 'Title');
 
     this.text = this.add.text(140, 170, '', {
       font: '32px Courier', fill: '#28eefd',

@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import Button from '../Objects/Button';
 import { setScore } from '../api/scoreBoard';
 
 export default class GameOver extends Phaser.Scene {
@@ -15,6 +16,9 @@ export default class GameOver extends Phaser.Scene {
         fontSize: '22px',
       },
     ).setOrigin(0.5);
+
+    this.menuButton = new Button(this, 210, 300, 'blueButton1', 'blueButton2', 'Menu', 'Title');
+
 
     this.add.text(
       game.config.width / 2,
