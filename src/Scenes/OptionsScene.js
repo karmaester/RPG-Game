@@ -2,11 +2,11 @@ import 'phaser';
 import Button from '../Objects/Button';
 
 export default class OptionsScene extends Phaser.Scene {
-  constructor () {
+  constructor() {
     super('Options');
   }
 
-  create () {
+  create() {
     this.model = this.sys.game.globals.model;
 
     this.text = this.add.text(100, 50, 'Music Options', { fontSize: 30 });
@@ -14,13 +14,12 @@ export default class OptionsScene extends Phaser.Scene {
     this.musicText = this.add.text(190, 130, 'Enable', { fontSize: 24 });
 
 
-
     this.musicButton.setInteractive();
 
-    this.musicButton.on('pointerdown', function () {
+    this.musicButton.on('pointerdown', () => {
       this.model.musicOn = !this.model.musicOn;
       this.updateAudio();
-    }.bind(this));
+    });
 
     this.menuButton = new Button(this, 210, 300, 'blueButton1', 'blueButton2', 'Menu', 'Title');
 
@@ -40,4 +39,4 @@ export default class OptionsScene extends Phaser.Scene {
       }
     }
   }
-};
+}

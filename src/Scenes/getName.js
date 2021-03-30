@@ -37,6 +37,5 @@ export default class GetName extends Phaser.Scene {
         this.scene.start('Game');
       }
     });
-
   }
 }

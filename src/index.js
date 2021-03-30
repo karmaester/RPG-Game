@@ -14,7 +14,7 @@ import Model from './Model';
 import { BattleScene, UIScene } from './Scenes/BattleScene';
 
 class Game extends Phaser.Game {
-  constructor () {
+  constructor() {
     super(config);
     const model = new Model();
     this.globals = { model, bgMusic: null };
