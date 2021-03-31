@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import Phaser from 'phaser';
 import Button from '../Objects/Button';
 import { setScore } from '../api/scoreBoard';
@@ -47,6 +48,7 @@ export default class GameOver extends Phaser.Scene {
       },
     ).setOrigin(0.5);
 
-    setScore(window.playerName, window.score);
+    setScore(window.playerName, window.score.to_i);
   }
 }
+/* eslint-enable no-undef */

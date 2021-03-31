@@ -1,3 +1,4 @@
+/* eslint-disable no-undef, no-unused-vars, class-methods-use-this, max-len, no-plusplus */
 import 'phaser';
 
 export default class GameScene extends Phaser.Scene {
@@ -141,3 +142,4 @@ export default class GameScene extends Phaser.Scene {
     }
   }
 }
+/* eslint-enable no-undef, no-unused-vars, class-methods-use-this, max-len, no-plusplus */

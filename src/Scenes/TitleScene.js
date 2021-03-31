@@ -1,3 +1,4 @@
+/* eslint-disable no-undef, max-len, class-methods-use-this */
 import 'phaser';
 import config from '../Config/config';
 import Button from '../Objects/Button';
@@ -47,3 +48,4 @@ export default class TitleScene extends Phaser.Scene {
     );
   }
 }
+/* eslint-enable no-undef, max-len, class-methods-use-this */

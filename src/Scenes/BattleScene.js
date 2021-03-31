@@ -1,3 +1,4 @@
+/* eslint-disable no-undef, no-plusplus */
 class BattleScene extends Phaser.Scene {
   constructor() {
     super('BattleScene');
@@ -73,12 +74,12 @@ class BattleScene extends Phaser.Scene {
   checkEndBattle() {
     let victory = true;
     // if all enemies are dead we have victory
-    for (var i = 0; i < this.enemies.length; i++) {
+    for (let i = 0; i < this.enemies.length; i++) {
       if (this.enemies[i].living) victory = false;
     }
     let gameOver = true;
     // if all heroes are dead we have game over
-    for (var i = 0; i < this.heroes.length; i++) {
+    for (let i = 0; i < this.heroes.length; i++) {
       if (this.heroes[i].living) gameOver = false;
     }
     return victory || gameOver;
@@ -86,7 +87,7 @@ class BattleScene extends Phaser.Scene {
 
   // when the player have selected the enemy to be attacked
   receivePlayerSelection(action, target) {
-    if (action == 'attack') {
+    if (action === 'attack') {
       this.units[this.index].attack(this.enemies[target]);
     }
     // next turn in 3 seconds
@@ -455,3 +456,4 @@ class Message extends Phaser.GameObjects.Container {
 }
 
 export { BattleScene, UIScene };
+/* eslint-enable no-undef, no-plusplus */

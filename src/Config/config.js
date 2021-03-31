@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import 'phaser';
 
 export default {
@@ -11,13 +12,8 @@ export default {
     default: 'arcade',
     arcade: {
       gravity: { y: 0 },
-      debug: false, // set to true to view zones
+      debug: false,
     },
   },
-//   scene: [
-//     BootScene,
-//     WorldScene,
-//     BattleScene,
-//     UIScene
-// ]
 };
+/* eslint-enable no-undef */

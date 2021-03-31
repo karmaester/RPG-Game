@@ -1,3 +1,4 @@
+/* eslint-disable no-undef, radix, no-plusplus */
 import 'phaser';
 
 export default class PreloaderScene extends Phaser.Scene {
@@ -93,3 +94,4 @@ export default class PreloaderScene extends Phaser.Scene {
     }
   }
 }
+/* eslint-enable no-undef, radix, no-plusplus */

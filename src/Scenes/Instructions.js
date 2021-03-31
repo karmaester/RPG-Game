@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import 'phaser';
 import Button from '../Objects/Button';
 
@@ -16,3 +17,4 @@ export default class InstructionsScene extends Phaser.Scene {
     this.menuButton = new Button(this, 210, 300, 'blueButton1', 'blueButton2', 'Menu', 'Title');
   }
 }
+/* eslint-enable no-undef */

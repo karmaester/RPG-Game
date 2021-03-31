@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import Phaser from 'phaser';
 import Button from '../Objects/Button';
 import { scoreBoard, sortScores } from '../api/scoreBoard';
@@ -42,3 +43,4 @@ export default class Scores extends Phaser.Scene {
     this.displayLeaders(sortScores(scores));
   }
 }
+/* eslint-enable no-undef */
