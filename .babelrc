@@ -4,6 +4,7 @@
       "corejs": 3.9,
       "useBuiltIns": "usage",
       "targets": {
+        "node": "current",
         "browsers": [
           ">0.25%",
           "not ie 11",
@@ -12,5 +13,5 @@
       },
       "modules": false
     }]
-  ],
+  ]
 }
