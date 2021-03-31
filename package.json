@@ -1,6 +1,9 @@
 {
   "name": "phaser3-project-template",
   "jest": {
+    "setupFiles": [
+      "jest-canvas-mock"
+    ],
     "testEnvironment": "node",
     "transform": {
       "node_modules/variables/.+\\.(j|t)sx?$": "babel-jest"
@@ -59,6 +62,7 @@
     "babel-jest": "^26.6.3",
     "core-js": "^3.9.1",
     "jest": "^26.6.3",
+    "jest-canvas-mock": "^2.3.1",
     "phaser": "^3.50.0",
     "regenerator-runtime": "^0.13.7"
   }

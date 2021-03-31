@@ -108,28 +108,28 @@ export default class BattleScene extends Phaser.Scene {
 
   endBattle() {
     if (this.checkLoss()) {
-        // clear state, remove sprites
-    this.heroes.length = 0;
-    this.enemies.length = 0;
-    for (let i = 0; i < this.units.length; i++) {
+      // clear state, remove sprites
+      this.heroes.length = 0;
+      this.enemies.length = 0;
+      for (let i = 0; i < this.units.length; i++) {
       // link item
-      this.units[i].destroy();
-    }
-    this.units.length = 0;
-    // sleep the UI
-    this.scene.sleep('UIScene');
+        this.units[i].destroy();
+      }
+      this.units.length = 0;
+      // sleep the UI
+      this.scene.sleep('UIScene');
       this.scene.switch('GameOver');
     } else {
-        // clear state, remove sprites
-    this.heroes.length = 0;
-    this.enemies.length = 0;
-    for (let i = 0; i < this.units.length; i++) {
+      // clear state, remove sprites
+      this.heroes.length = 0;
+      this.enemies.length = 0;
+      for (let i = 0; i < this.units.length; i++) {
       // link item
-      this.units[i].destroy();
-    }
-    this.units.length = 0;
-    // sleep the UI
-    this.scene.sleep('UIScene');
+        this.units[i].destroy();
+      }
+      this.units.length = 0;
+      // sleep the UI
+      this.scene.sleep('UIScene');
       this.scene.switch('Game');
     }
     // return to WorldScene and sleep current BattleScene
