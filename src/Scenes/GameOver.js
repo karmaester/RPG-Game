@@ -47,8 +47,9 @@ export default class GameOver extends Phaser.Scene {
         fontSize: '24px',
       },
     ).setOrigin(0.5);
-
-    setScore(window.playerName, window.score.to_i);
+    console.log(`${window.playerName}: ${window.score}`);
+    console.log(typeof window.score);
+    setScore(window.playerName, window.score);
   }
 }
 /* eslint-enable no-undef */
