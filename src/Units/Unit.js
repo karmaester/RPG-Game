@@ -1,4 +1,4 @@
-// base class for heroes and enemies
+/* eslint-disable no-undef */
 export default class Unit extends Phaser.GameObjects.Sprite {
   constructor(scene, x, y, texture, frame, type, hp, damage) {
     super(scene, x, y, texture, frame);
@@ -42,3 +42,4 @@ export default class Unit extends Phaser.GameObjects.Sprite {
     }
   }
 }
+/* eslint-enable no-undef */

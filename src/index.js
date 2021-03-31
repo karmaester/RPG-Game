@@ -12,7 +12,8 @@ import GameOver from './Scenes/GameOver';
 import GetName from './Scenes/getName';
 import CreditsScene from './Scenes/CreditsScene';
 import Model from './Model';
-import { BattleScene, UIScene } from './Scenes/BattleScene';
+import BattleScene from './Scenes/BattleScene';
+import UIScene from './Scenes/UIScene';
 
 class Game extends Phaser.Game {
   constructor() {
