@@ -17,17 +17,17 @@ export default class BattleScene extends Phaser.Scene {
 
   startBattle() {
     // player character - warrior
-    const warrior = new PlayerCharacter(this, 350, 70, 'player', 1, 'Firebeast', 3, 20);
+    const warrior = new PlayerCharacter(this, 350, 70, 'player', 1, 'Firebeast', 30, 12);
     this.add.existing(warrior);
 
     // player character - mage
-    const mage = new PlayerCharacter(this, 350, 150, 'player', 4, 'Icebeast', 3, 8);
+    const mage = new PlayerCharacter(this, 350, 150, 'player', 4, 'Icebeast', 30, 8);
     this.add.existing(mage);
 
-    const dragonblue = new Enemy(this, 70, 65, 'damon', null, 'Demon', 20, 3);
+    const dragonblue = new Enemy(this, 70, 65, 'damon', null, 'Demon', 35, 15);
     this.add.existing(dragonblue);
 
-    const dragonOrange = new Enemy(this, 70, 170, 'shadow', null, 'Shadow', 20, 3);
+    const dragonOrange = new Enemy(this, 70, 170, 'shadow', null, 'Shadow', 35, 12);
     this.add.existing(dragonOrange);
 
     // array with heroes
@@ -88,6 +88,15 @@ export default class BattleScene extends Phaser.Scene {
     return victory || gameOver;
   }
 
+  checkLoss() {
+    let loss = true;
+    // if all heroes are dead we have game over
+    for (let i = 0; i < this.heroes.length; i++) {
+      if (this.heroes[i].living) loss = false;
+    }
+    return loss;
+  }
+
   // when the player have selected the enemy to be attacked
   receivePlayerSelection(action, target) {
     if (action === 'attack') {
@@ -98,7 +107,8 @@ export default class BattleScene extends Phaser.Scene {
   }
 
   endBattle() {
-    // clear state, remove sprites
+    if (this.checkLoss()) {
+        // clear state, remove sprites
     this.heroes.length = 0;
     this.enemies.length = 0;
     for (let i = 0; i < this.units.length; i++) {
@@ -108,10 +118,18 @@ export default class BattleScene extends Phaser.Scene {
     this.units.length = 0;
     // sleep the UI
     this.scene.sleep('UIScene');
-
-    if (true) {
       this.scene.switch('GameOver');
     } else {
+        // clear state, remove sprites
+    this.heroes.length = 0;
+    this.enemies.length = 0;
+    for (let i = 0; i < this.units.length; i++) {
+      // link item
+      this.units[i].destroy();
+    }
+    this.units.length = 0;
+    // sleep the UI
+    this.scene.sleep('UIScene');
       this.scene.switch('Game');
     }
     // return to WorldScene and sleep current BattleScene
