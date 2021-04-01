@@ -1,8 +1,7 @@
 import 'babel-polyfill';
 import 'jest-canvas-mock';
-import Phaser from 'phaser';
-import Menu from '../Menus/Menu';
+import Game from '../index';
 
-test('Player is a subclass of Sprite', () => {
-  expect(Menu.prototype instanceof Phaser.GameObjects.Container).toBe(true);
+test('Game is a function', () => {
+  expect(typeof Game).toBe('object');
 });
