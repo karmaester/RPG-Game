@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import 'jest-canvas-mock';
 import Phaser from 'phaser';
 import Menu from '../Menus/Menu';
