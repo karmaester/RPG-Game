@@ -5,6 +5,7 @@ import BattleScene from '../Scenes/BattleScene';
 import BootScene from '../Scenes/BootScene';
 import CreditsScene from '../Scenes/CreditsScene';
 import GameOver from '../Scenes/GameOver';
+import GameScene from '../Scenes/GameScene';
 
 test('BattleScene is an instance of Scene', () => {
   expect(BattleScene.prototype instanceof Phaser.Scene).toBe(true);
@@ -36,4 +37,12 @@ test('GameOver is an instance of Scene', () => {
 
 test('GameOver is a function', () => {
   expect(typeof GameOver).toBe('function');
+});
+
+test('GameScene is an instance of Scene', () => {
+  expect(GameScene.prototype instanceof Phaser.Scene).toBe(true);
+});
+
+test('GameScene is a function', () => {
+  expect(typeof GameScene).toBe('function');
 });
