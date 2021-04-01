@@ -8,6 +8,7 @@ import GameOver from '../Scenes/GameOver';
 import GameScene from '../Scenes/GameScene';
 import GetName from '../Scenes/getName';
 import InstructionsScene from '../Scenes/Instructions';
+import Message from '../Scenes/Message';
 
 test('BattleScene is an instance of Scene', () => {
   expect(BattleScene.prototype instanceof Phaser.Scene).toBe(true);
@@ -63,4 +64,12 @@ test('InstructionsScene is an instance of Scene', () => {
 
 test('InstructionsScene is a function', () => {
   expect(typeof InstructionsScene).toBe('function');
+});
+
+test('Message is an instance of Scene', () => {
+  expect(Message.prototype instanceof Phaser.GameObjects.Container).toBe(true);
+});
+
+test('Message is a function', () => {
+  expect(typeof Message).toBe('function');
 });
