@@ -23,6 +23,17 @@ module.exports = {
         exclude: /node_modules/,
         use: 'babel-loader',
       },
+      {
+        test: /\.(gif|png|jpe?g|svg|xml)$/i,
+        use: 'file-loader',
+      },
+      {
+        test: /\.mp3$/,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]',
+        },
+      },
     ],
   },
 
@@ -32,5 +43,7 @@ module.exports = {
       WEBGL_RENDERER: JSON.stringify(true),
     }),
   ],
+
+  devtool: 'source-map',
 
 };
