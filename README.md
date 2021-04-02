@@ -6,11 +6,11 @@ This is an RPG game where the user is capable to move around the map and find en
 ![screenshot](docs/screenshot2.png)
 ![screenshot](docs/screenshot3.png)
 
-## Live Demo
+## 🔴 Live Demo
 
 [Live version](https://vigorous-feynman-e24bb9.netlify.app/)
 
-## Built With
+## 🔨 Built With
 
 - Javascript
 - Phaser 3
@@ -21,10 +21,9 @@ This is an RPG game where the user is capable to move around the map and find en
 
 ### Concept
 Control to the warrior to find monsters around the map.
-Kill as many shadows and demons as possible.
-Avoid being killed by the 2 different monsters that exist in the world.
-Controls
-You need a keyboard to control the Player Ship.
+Kill as many shadows and demons as possible and avoid being killed by them.
+
+### Controls
 
 Press ⬆️ to move up.
 
@@ -102,6 +101,7 @@ Give a ⭐️ if you like this project!
 
 - Microverse
 - Stand up Team
+- [Zenva Pty Ltd](https://gamedevacademy.org/how-to-create-a-turn-based-rpg-game-in-phaser-3-part-1/)
 - TSEs
 
 ## 📝 License
