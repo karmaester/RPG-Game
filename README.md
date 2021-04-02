@@ -1,6 +1,6 @@
 # RPG Game
 
-A Phaser 3 project with ES6, Babel 7, and Webpack 4
+This is an RPG game where the user is capable to move around the map and find enemies to fight randomly. The user will have 2 turns using a fire beast and an ice beast, and the user will have to fight until the enemies or the beasts die.
 
 ![screenshot](docs/screenshot1.png)
 ![screenshot](docs/screenshot2.png)
@@ -8,7 +8,7 @@ A Phaser 3 project with ES6, Babel 7, and Webpack 4
 
 ## Live Demo
 
-[Live version](https://bigwizzo.github.io/What-to-Do/)
+[Live version](https://vigorous-feynman-e24bb9.netlify.app/)
 
 ## Built With
 
@@ -90,7 +90,7 @@ To make sure the linters' checks using Github Actions work properly, you should 
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
+Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/karmaester/RPG-Game/issues).
 
