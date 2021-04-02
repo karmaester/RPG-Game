@@ -13,6 +13,7 @@ import OptionsScene from '../Scenes/OptionsScene';
 import PreloaderScene from '../Scenes/PreloaderScene';
 import Scores from '../Scenes/Scores';
 import TitleScene from '../Scenes/TitleScene';
+import UIScene from '../Scenes/UIScene';
 
 test('BattleScene is an instance of Scene', () => {
   expect(BattleScene.prototype instanceof Phaser.Scene).toBe(true);
@@ -108,4 +109,12 @@ test('TitleScene is an instance of Scene', () => {
 
 test('TitleScene is a function', () => {
   expect(typeof TitleScene).toBe('function');
+});
+
+test('UIScene is an instance of Scene', () => {
+  expect(UIScene.prototype instanceof Phaser.Scene).toBe(true);
+});
+
+test('UIScene is a function', () => {
+  expect(typeof UIScene).toBe('function');
 });
