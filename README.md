@@ -18,6 +18,7 @@ A Phaser 3 project with ES6, Babel 7, and Webpack 4
 - Babel
 
 ## Game Functionality
+
 ### Concept
 Control to the warrior to find monsters around the map.
 Kill as many shadows and demons as possible.
@@ -26,23 +27,34 @@ Controls
 You need a keyboard to control the Player Ship.
 
 Press ⬆️ to move up.
+
 Press ⬇️ to move down.
+
 Press ➡️ to go right.
+
 Press ⬅️ to go left.
+
 When finding a monster.
 
 Press ⬆️ or ⬇️ to select the monster you want to attack.
 Press Space to attack the enemies.
 
-## Getting Started
+### Assets
+
+| Asset | Description |
+|---------|-------------|
+| ![beast](docs/red.png) ![beast](docs/blue.png)  | Fighting beasts |
+| ![beast](docs/shadow.png) ![beast](docs/damon.png)  | Enemies |
+
+## 👷 Getting Started
 
 To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
 - Open the console
-- Download or git clone https://github.com/bigwizzo/What-to-Do.git
-- cd Books-Books
+- Download or git clone git@github.com:karmaester/RPG-Game.git
+- cd RPG-Game
 
 ### Available Commands
 
