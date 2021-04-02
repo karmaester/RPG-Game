@@ -1,7 +1,11 @@
 /* eslint-disable no-undef, radix, no-plusplus */
 import 'phaser';
 import btn01 from '../assets/ui/blue_button02.png';
+import btn02 from '../assets/ui/blue_button03.png';
 import music from '../assets/TownTheme.mp3';
+import box from '../assets/ui/grey_box.png';
+import checkbox from '../assets/ui/blue_boxCheckmark.png';
+import logo from '../assets/fire-ice.png';
 
 export default class PreloaderScene extends Phaser.Scene {
   constructor() {
@@ -81,11 +85,11 @@ export default class PreloaderScene extends Phaser.Scene {
 
     // load assets needed in our game
     this.load.image('blueButton1', btn01);
-    this.load.image('blueButton2', '../assets/ui/blue_button03.png');
-    this.load.image('box', '../assets/ui/grey_box.png');
-    this.load.image('checkedBox', '../assets/ui/blue_boxCheckmark.png');
+    this.load.image('blueButton2', btn02);
+    this.load.image('box', box);
+    this.load.image('checkedBox', checkbox);
     this.load.audio('bgMusic', music);
-    this.load.image('logo', '../assets/fire-ice.png');
+    this.load.image('logo', logo);
   }
 
   ready() {
