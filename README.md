@@ -69,7 +69,7 @@ To get a local copy up and running follow these simple example steps.
 Run the following commands
 
 ```
-   npm run watch
+   npm run test
 ```
 
 ### Github Actions
@@ -92,7 +92,7 @@ To make sure the linters' checks using Github Actions work properly, you should 
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/bigwizzo/What-to-Do/issues).
+Feel free to check the [issues page](https://github.com/karmaester/RPG-Game/issues).
 
 ## Show your support
 
