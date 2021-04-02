@@ -2,7 +2,9 @@
 
 A Phaser 3 project with ES6, Babel 7, and Webpack 4
 
-![screenshot](src/images/screenshot.png)
+![screenshot](docs/screenshot1.png)
+![screenshot](docs/screenshot2.png)
+![screenshot](docs/screenshot3.png)
 
 ## Live Demo
 
@@ -14,6 +16,23 @@ A Phaser 3 project with ES6, Babel 7, and Webpack 4
 - Phaser 3
 - Webpack
 - Babel
+
+## Game Functionality
+### Concept
+Control to the warrior to find monsters around the map.
+Kill as many shadows and demons as possible.
+Avoid being killed by the 2 different monsters that exist in the world.
+Controls
+You need a keyboard to control the Player Ship.
+
+Press ⬆️ to move up.
+Press ⬇️ to move down.
+Press ➡️ to go right.
+Press ⬅️ to go left.
+When finding a monster.
+
+Press ⬆️ or ⬇️ to select the monster you want to attack.
+Press Space to attack the enemies.
 
 ## Getting Started
 
